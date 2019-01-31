@@ -20,3 +20,7 @@ I am editing a text file in RStudio
 **HI**
 #Now I am formatting things 
 ##*This is italic* and this is ***Bold***
+
+#HEader?
+
+##Headder?
