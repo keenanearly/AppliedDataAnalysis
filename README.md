@@ -12,3 +12,4 @@
 Some edits
 I feel drunk with power
 I am playing with git. **Technology** *is* ***crazy***!
+This is some new text.  It's basically brilliant. 
