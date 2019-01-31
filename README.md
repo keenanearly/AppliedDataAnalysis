@@ -28,3 +28,5 @@ I am editing a text file in RStudio
 WHy does the hashtage header work for him but not me? What am I doing wrong?
 
 # Is it because I need a space?
+
+## It *is* because I need a space! This is **transformative!**
