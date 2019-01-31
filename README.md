@@ -24,3 +24,5 @@ I am editing a text file in RStudio
 #HEader?
 
 ##Headder?
+
+WHy does the hashtage header work for him but not me? What am I doing wrong?
