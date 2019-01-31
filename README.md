@@ -11,3 +11,4 @@
 **This is a branch** *I think it's a branch*
 Some edits
 I feel drunk with power
+I am playing with git. **Technology** *is* ***crazy***!
