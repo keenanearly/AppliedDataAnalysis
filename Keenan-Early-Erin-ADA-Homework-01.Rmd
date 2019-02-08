@@ -1,0 +1,159 @@
+---
+title: "Keenan-Early-Erin-ADAHomework-01"
+author: "Erin Keenan Early"
+date: "February 8, 2019"
+output: html_document
+---
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+# Homework 1
+
+## Challenge 1: Gettysburg Address
+
+```{r}
+abe<-c("Four score and seven years ago our fathers brought forth on this continent, a new nation, conceived in Liberty, and dedicated to the proposition that all men are created equal.")
+abe
+```
+
+```{r}
+library(stringr)
+```
+
+```{r}
+abe_split<-str_split(abe, " ", simplify=TRUE)
+abe_split
+```
+
+```{r}
+abe3<-abe_split[seq(from=1, to=30, by =3)]
+abe3
+```
+
+## Challenge 2: M Matrix
+
+```{r}
+m<-matrix(data = 1:80,nrow = 8, ncol = 10, byrow = FALSE)
+m
+```
+
+Given the matrix, **m**, above, extract the 2nd, 3rd, and 6th columns and assign them to the variable **x**
+
+```{r}
+x<-m[,c(2,3,6)]
+x
+```
+
+Given the matrix, **m**, above, extract the 6th to 8th row and assign them to the variable **x**
+
+```{r}
+x<-m[6:8,]
+x
+```
+
+Given the matrix, **m**, above, extract the elements from row 2 column 2, to row 6 column 9 and assign them to the variable **x**
+
+```{r}
+x<-m[2:6,2:9]
+x
+```
+
+## Challenge 3: Array
+
+Construct a 4-dimensional, 400 element array (5x5x4x4) named **a** consisting of the numbers 400 to 1 (i.e., a descending series).
+
+```{r}
+a<-array(data=400:1, dim = c(5,5,4,4))
+a
+```
+
+Given this matrix, what would the following return?
+
+```{r}
+a[1,1,1,2]
+```
+This returns the entry from the first row, first column in ,,1,2
+
+```{r}
+a[2,3,2,]
+```
+This returns the entry from the second row, third column in all 2nd "levels"
+
+```{r}
+a[1:5,1:5,3,3]
+```
+This returns the entries in rows 1 through 5 and columns 1 through 5 in ,,3,3,
+
+## Challenge 4: Phylogeny
+
+Create a **list** representing the (simplified) primate taxonomy.
+
+```{r}
+Order<-c("Primates")
+Suborder<- c("Haplorhini", "Strepsirhini")
+Infraorder <- c("Anthropoidea", "Tarsoidea", "Lorisoidea", "Lemuroidea")
+Parvorder <- c("Platyrhini", "Catarrhini")
+Family<- c("Cebidae", "Atelidae", "Pitheciidae", "Cercopithecidae", "Hylobatidae", "Hominidae", "Tarsiidae", "Lorisidae", "Galagidae", "Cheirogaleidae", "Lepilemuridae", "Indriidae", "Lemuridae", "Daubentoniidae")
+```
+
+```{r}
+Phylogeny<-list(Order,Suborder,Infraorder,Parvorder,Family)
+Phylogeny
+```
+```{r}
+Phylogeny[1]
+Phylogeny[[2]][1]
+Phylogeny[[3]][1]
+Phylogeny[[4]][1]
+Phylogeny[[5]][1:3]
+Phylogeny[[4]][2]
+Phylogeny[[5]][4:6]
+Phylogeny[[3]][2]
+Phylogeny[[5]][7]
+Phylogeny[[2]][2]
+Phylogeny[[3]][3]
+Phylogeny[[5]][8:9]
+Phylogeny[[3]][4]
+Phylogeny[[5]][10:14]
+```
+
+## Challenge 5: 5x3 Matrix
+
+Store the following numbers as a 5x3 matrix: 3,0,1,23,1,2,33,1,1,42,0,1,41,0,2. Be sure to fill the matrix **ROWWISE**
+
+```{r}
+matrix<-matrix(data = c(3, 0, 1, 23, 1, 2, 33, 1, 1, 42, 0, 1, 41, 0, 2), nrow=5, ncol=3, byrow=TRUE)
+matrix
+```
+
+Then do the following: 
+Coerce the matrix to a data frame
+
+```{r}
+df<-data.frame(matrix)
+df
+```
+
+As a data frame, coerce the second column to be *logical-valued* (Boolean)
+
+```{r}
+str(df)
+```
+
+```{r}
+as.logical(df[[2]])
+```
+
+
+As a data frame, coerce the third column to be *factor-valued*
+
+```{r}
+as.factor(df[[3]])
+```
+
+
+
